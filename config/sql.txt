@@ -1,0 +1,33 @@
+create database family_financial_management;
+use family_financial_management;
+-- 用户表
+create table user
+(
+	user_id int(11) primary key not null auto_increment comment '用户id',
+	user_username varchar(32) not null comment '用户名',
+	user_password varchar(32) not null comment '密码',
+	user_email varchar(100) not null comment '邮箱',
+	user_ismanager tinyint(1) not null default 0 comment '是否管理员',
+	user_isvip tinyint(1) not null default 0 comment '是否会员'
+);
+-- 收入表
+create table income
+(
+	income_id int(11) primary key not null auto_increment comment '收入编号',
+	income_payee varchar(32) not null comment '收款人',
+	income_content varchar(32) not null comment '收款内容',
+	income_date date not null comment '收款日期',
+	income_money int(11) not null comment '收款金额'
+);
+-- 支出表
+create table pay
+(
+	pay_id int(11) primary key not null auto_increment comment '支出编号',
+	pay_payer varchar(32) not null comment '付款人',
+	pay_content varchar(32) not null comment '付款内容',
+	pay_date date not null  comment '支出日期',
+	pay_money int(11) not null comment '支出金额'
+)
+drop table user;
+drop table income;
+drop table pay;
