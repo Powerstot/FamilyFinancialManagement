@@ -1,2 +1,2 @@
 # FamilyFinancialManagement
-这是一个Javase课设项目，使用swing完成界面的设计，mysql数据库连接
+家庭财务管理系统，这是一个Javase项目，使用swing完成界面的设计，mysql数据库连接
