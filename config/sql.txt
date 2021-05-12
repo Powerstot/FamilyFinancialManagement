@@ -1,33 +1,34 @@
 create database family_financial_management;
 use family_financial_management;
--- ÓÃ»§±í
+-- ç”¨æˆ·è¡¨
 create table user
 (
-	user_id int(11) primary key not null auto_increment comment 'ÓÃ»§id',
-	user_username varchar(32) not null comment 'ÓÃ»§Ãû',
-	user_password varchar(32) not null comment 'ÃÜÂë',
-	user_email varchar(100) not null comment 'ÓÊÏä',
-	user_ismanager tinyint(1) not null default 0 comment 'ÊÇ·ñ¹ÜÀíÔ±',
-	user_isvip tinyint(1) not null default 0 comment 'ÊÇ·ñ»áÔ±'
+	user_id int(11) primary key not null auto_increment comment 'ç”¨æˆ·id',
+	user_username varchar(32) not null comment 'ç”¨æˆ·å',
+	user_password varchar(32) not null comment 'å¯†ç ',
+	user_email varchar(100) not null comment 'é‚®ç®±',
+	user_ismanager tinyint(1) not null default 0 comment 'æ˜¯å¦ç®¡ç†å‘˜',
+	user_isvip tinyint(1) not null default 0 comment 'æ˜¯å¦ä¼šå‘˜'
 );
--- ÊÕÈë±í
+-- æ”¶å…¥è¡¨
 create table income
 (
-	income_id int(11) primary key not null auto_increment comment 'ÊÕÈë±àºÅ',
-	income_payee varchar(32) not null comment 'ÊÕ¿îÈË',
-	income_content varchar(32) not null comment 'ÊÕ¿îÄÚÈİ',
-	income_date date not null comment 'ÊÕ¿îÈÕÆÚ',
-	income_money int(11) not null comment 'ÊÕ¿î½ğ¶î'
+	income_id int(11) primary key not null auto_increment comment 'æ”¶å…¥ç¼–å·',
+	income_payee varchar(32) not null comment 'æ”¶æ¬¾äºº',
+	income_content varchar(32) not null comment 'æ”¶æ¬¾å†…å®¹',
+	income_date date not null comment 'æ”¶æ¬¾æ—¥æœŸ',
+	income_money int(11) not null comment 'æ”¶æ¬¾é‡‘é¢'
 );
--- Ö§³ö±í
+-- æ”¯å‡ºè¡¨
 create table pay
 (
-	pay_id int(11) primary key not null auto_increment comment 'Ö§³ö±àºÅ',
-	pay_payer varchar(32) not null comment '¸¶¿îÈË',
-	pay_content varchar(32) not null comment '¸¶¿îÄÚÈİ',
-	pay_date date not null  comment 'Ö§³öÈÕÆÚ',
-	pay_money int(11) not null comment 'Ö§³ö½ğ¶î'
+	pay_id int(11) primary key not null auto_increment comment 'æ”¯å‡ºç¼–å·',
+	pay_payer varchar(32) not null comment 'ä»˜æ¬¾äºº',
+	pay_content varchar(32) not null comment 'ä»˜æ¬¾å†…å®¹',
+	pay_date date not null  comment 'æ”¯å‡ºæ—¥æœŸ',
+	pay_money int(11) not null comment 'æ”¯å‡ºé‡‘é¢'
 )
 drop table user;
 drop table income;
 drop table pay;
+   
